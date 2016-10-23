@@ -93,6 +93,7 @@ public class Customer implements Comparable
 
     @Override
     public int compareTo(Object o) {
+        String fullName = name+lastName+middleName;
 
         return 0;
     }
