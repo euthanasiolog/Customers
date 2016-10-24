@@ -80,21 +80,17 @@ public class Customer implements Comparable
 
     @Override
     public String toString() {
-        return "Customer{" +
-                "name='" + name + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", middleName='" + middleName + '\'' +
-                ", id=" + id +
-                ", creditCardId=" + creditCardId +
-                ", bankAccount=" + bankAccount +
-                ", address='" + address + '\'' +
-                '}';
+        return "Клиент №" + id +
+                " | ФИО: " + lastName + " " + name +  " " + middleName +
+                " | номер кредитной карты: " + creditCardId +
+                " | номер счета в банке: " + bankAccount +
+                " | адрес: " + address;
     }
 
     @Override
     public int compareTo(Object o) {
-        String fullName = name+lastName+middleName;
-
-        return 0;
+        String fullName = lastName+name+middleName;
+        String comparedFullName = ((Customer) o).lastName + ((Customer) o).getName() + ((Customer) o).getMiddleName();
+        return fullName.compareTo(comparedFullName);
     }
 }
