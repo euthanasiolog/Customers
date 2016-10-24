@@ -90,7 +90,7 @@ public class Customer implements Comparable
     @Override
     public int compareTo(Object o) {
         String fullName = lastName+name+middleName;
-        String comparedFullName = ((Customer) o).lastName + ((Customer) o).getName() + ((Customer) o).getMiddleName();
+        String comparedFullName = ((Customer) o).getLastName() + ((Customer) o).getName() + ((Customer) o).getMiddleName();
         return fullName.compareTo(comparedFullName);
     }
 }
