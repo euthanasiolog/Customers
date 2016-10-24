@@ -3,13 +3,13 @@
  */
 public class Customer implements Comparable
 {
-    String name;
-    String lastName;
-    String middleName;
-    int id;
-    long creditCardId;
-    long bankAccount;
-    String address;
+    private String name;
+    private String lastName;
+    private String middleName;
+    private int id;
+    private long creditCardId;
+    private long bankAccount;
+    private String address;
 
     public Customer(String name, String lastName, String middleName, int id, long creditCardId, long bankAccount, String address)
     {
